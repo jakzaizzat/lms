@@ -1,25 +1,42 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        LMS
-      </h1>
-      <h2 class="subtitle">
-        Leave Management Syste
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+  <div class="container mx-auto px-6 py-16 sm:py-16 md:py-24">
+    <div class="mx-auto max-w-sm">
+      <div class="py-10 text-center">
+        <logo/>
+      </div>
+      <div class="card">
+
+        <div class="card--content px-8">
+          <h1 class="uppercase text-base font-semibold tracking-wide text-center py-8 text-blue-darkest">
+            Welcome Back
+          </h1>
+
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+            Email
+          </label>
+          <input class="appearance-none block w-full bg-grey-lighter text-grey-darker rounded py-3 px-4 mb-3 leading-tight focus:outline-none" id="grid-first-name" type="email">
+
+
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+            Password
+          </label>
+          <input class="appearance-none block w-full bg-grey-lighter text-grey-darker rounded py-3 px-4 mb-3 leading-tight focus:outline-none" id="grid-first-name" type="password">
+
+
+          <button class="shadow rounded bg-primary text-white uppercase w-full p-4 tracking-wider text-sm my-4">
+            log in
+          </button>
+        </div>
+
+        <div class="card--footer bg-primary-white px-8">
+          <div class="flex justify-between py-8">
+            <a class="font-medium text-primary hover:text-primary-dark no-underline" href="#">Don't have account yet</a>
+            <a class="text-grey-darkest hover:text-black no-underline" href="#">Forgot Password</a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -31,43 +48,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-
-
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
