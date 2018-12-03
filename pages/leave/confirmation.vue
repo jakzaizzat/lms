@@ -110,6 +110,7 @@
 
             <template slot="footer">
                 <div class="flex justify-end py-4">
+                    <a class="flex justify-center items-center no-underline text-white text-center bg-white text-red group font-bold rounded py-2 nuxt-link-exact-active nuxt-link-active px-4 mr-6 border-red border" href="#">Reject</a>
                     <a class="flex justify-center items-center no-underline text-white text-center bg-primary group font-bold rounded py-2 nuxt-link-exact-active nuxt-link-active px-4" href="#">Submit</a>
                 </div>
             </template>

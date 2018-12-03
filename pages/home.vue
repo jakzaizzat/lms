@@ -6,7 +6,7 @@
                 <span class="flex flex-1 py-2 px-4 font-bold rounded text-center text-lg uppercase items-center justify-center mx-6 my-2 bg-green-lighter text-green-darker">3</span>
             </div>
             <div class="flex flex-col card flex-1 text-center py-6 mx-4">
-                <div class="text-grey-dark text-sm uppercase text-center font-bold tracking-wider mb-2 md:text-md">Emergency Leave</div>
+                <div class="text-grey-dark text-sm uppercase text-center font-bold tracking-wider mb-2 md:text-md">Medical Leave</div>
                 <span class="flex flex-1 py-2 px-4 font-bold rounded text-center text-lg uppercase items-center justify-center mx-6 my-2 bg-grey-lighter text-grey-darker">0</span>
             </div>
             <div class="flex flex-col card flex-1 text-center py-6 mx-4">

@@ -19,7 +19,7 @@
                         </nuxt-link>
                     </li>
                     <li>
-                        <nuxt-link to="/apply" class="flex items-center no-underline text-grey-darker group hover:text-black ml-10">
+                        <nuxt-link to="/leave/apply" class="flex items-center no-underline text-grey-darker group hover:text-black ml-10">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="fill-current w-6 h-6 mr-2 group-hover:text-primary text-grey-dark"><path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"></path> <path d="M0 0h24v24H0z" fill="none"></path></svg>
                             <span class="font-medium text-grey-darker">Apply Leave</span>
                         </nuxt-link>

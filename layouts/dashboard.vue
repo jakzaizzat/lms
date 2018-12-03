@@ -24,7 +24,7 @@
                                 </a>
                             </li>
                             <li>
-                                <nuxt-link to="/apply" class="flex justify-center items-center no-underline text-white text-center bg-primary group font-bold rounded py-2 mt-4">
+                                <nuxt-link to="/leave/apply" class="flex justify-center items-center no-underline text-white text-center bg-primary group font-bold rounded py-2 mt-4">
                                     <span>Apply Leave</span>
                                 </nuxt-link>
                             </li>
