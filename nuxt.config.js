@@ -35,7 +35,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~plugins/external.js' }
+    { src: '~plugins/external.js' },
+    { src: '~plugins/axios.js' }
   ],
 
   /*
@@ -43,13 +44,30 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
   /*
   ** Axios module configuration
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    host: 'localhost',
+    port: 8000,
+    prefix: '/api'
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: '/auth/login', method: 'post', propertyName: 'token' },
+          user: { url: '/auth/me', method: 'get', propertyName: '' },
+          logout: false
+        }
+      },
+      tokenType: 'Bearer'
+    }
   },
 
   /*

@@ -14,16 +14,19 @@
             <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
               Email
             </label>
-            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker rounded py-3 px-4 mb-3 leading-tight focus:outline-none" id="grid-first-name" type="email">
+            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker rounded py-3 px-4 mb-3 leading-tight focus:outline-none" v-model="email" type="email">
 
 
             <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
               Password
             </label>
-            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker rounded py-3 px-4 mb-3 leading-tight focus:outline-none" id="grid-first-name" type="password">
+            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker rounded py-3 px-4 mb-3 leading-tight focus:outline-none" v-model="password" type="password">
 
 
-            <button class="shadow rounded bg-primary text-white uppercase w-full p-4 tracking-wider text-sm my-4">
+            <button
+              class="shadow rounded bg-primary text-white uppercase w-full p-4 tracking-wider text-sm my-4"
+              @click="login"
+            >
               log in
             </button>
           </div>
@@ -48,6 +51,32 @@ export default {
   components: {
     Logo,
     Card
+  },
+  data() {
+    return {
+      email: 'jakzaizzat@gmail.com',
+      password: '1234567890',
+      error: null
+    }
+  },
+  methods: {
+    async login() {
+      try {
+        await this.$auth.loginWith('local', {
+          data: {
+            "email": this.email,
+            "password": this.password
+          }
+        })
+        this.$router.push('/home')
+      } catch (e) {
+        alert('error');
+        console.log(e);
+        if (this.$auth.loggedIn) {
+          alert('success logged in');
+        }
+      }
+    }
   }
 }
 </script>
